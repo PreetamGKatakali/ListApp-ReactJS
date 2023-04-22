@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope,faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -73,9 +75,10 @@ const App = () => {
     <div className='cointer'>
         <div>
         <input type="text"  value={name} placeholder='Add items' onChange={handleChange} className='input-field' />
-        <button type="button" onClick={handleAdd}>
+        {/* <button type="button" onClick={handleAdd}>
           Add
-        </button>
+        </button> */}
+        <FontAwesomeIcon icon={faPlus} size="lg" onClick={handleAdd}/>
         </div>
     <div>
       {list.map((item,key) => (
